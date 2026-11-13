@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body> 
+    <svg width = "100%" height = "2000">
+
+
+
+<defs>  
+    <linearGradient id = "MyGradient"> 
+    <stop offset = "20%" stop-color = "green"/> 
+    <stop offset = "80%" stop-color = "orange"/> 
+    </linearGradient> 
+
+    <path id="idname" fill="red" stroke="red" d="M20, 30, L1000, 100"/>  
+</defs> 
+<use xlink:href="#idname"/>  
+<text font-size = "36px" fill = "green" text-anchor = "middle">  
+<textPath startOffset = "50%" xlink:href="#idname">  The Long Dark  </textPath> 
+</text> 
+
+<g id = "figures" transform = "translate(0, 200)">
+    <g id = circle>
+        <circle cx = "200" cy = "150" r = "150" fill = "blue" stroke="black" stroke-width="4">
+            <animate 
+        attributeName="stroke" 
+        from= "black" 
+        to="red" 
+        dur="2s" 
+        begin="mouseover" 
+        fill="freeze"/>
+        </circle> 
+    </g>
+    <g id = rectangele>
+    <rect x = "400" y = "0" width = "400" height = "300" style="fill: red; fill-opacity: none; stroke: black; stroke-width: 4px">
+        <animate
+        attributeName = "stroke-width"
+        from = "0"
+        to = "4"
+        dur = "2s"
+        fill = "freeze"
+        repeatCount = "indefinite"
+        />
+    </rect>
+    <g>
+    <g id = ellipse>
+        <ellipse cx = "1050" cy = "150" rx = "200" ry = "120" fill = "green">
+            <animate 
+        attributeName="fill" 
+        from="green" 
+        to="blue" 
+        dur="5s" 
+        begin="click" 
+        fill="freeze" />
+        </ellipse>
+    </g>
+    <g id = "treug">
+        <polygon  points = "1300, 300 1600, 300 1450, 0" fill = "url(#MyGradient)"/>
+    </g>
+    <g id = "line">
+        <polyline points = "50,400    800, 400    750,450   1600, 450"  stroke="purple" stroke-width="3" fill = "none"/>
+    </g>
+</g>
+
+<!-- <path d = "M500, 800
+
+           L300, 1100
+           H450
+           L250, 1400
+           H400
+
+           V1600   
+           H600   
+           V1400
+           
+           H750
+           L550, 1100 
+           H700    
+           z" 
+           fill = "none" stroke = "black"/> -->
+
+
+
+
+</svg>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свойства CSS и вертикальное меню</title>
+    <style>
+        body
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        aside {
+            text-align: right;
+            float: right;
+            width: 500px;
+        }
+        ul.nav {
+            list-style-type: none;
+        }
+        ul.nav a {
+            display: block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        main {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        h3 {
+            width: 730px;
+            text-align: center;
+        }
+
+        .property {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            width:700px;
+        }
+        span {
+            font-weight: bold;
+            background-color: #e2e1e1;
+        }
+        section {
+            vertical-align: top;
+            display: inline-block;
+            width: 700px;
+        }
+        p {
+            padding: 20px 20px 20px 20px;
+        }
+        ul.need {
+            list-style-type: square;
+        }
+        .nonv:link {
+            color: red;
+            text-decoration: none;
+        }
+        .vis:visited {
+             color:  #8B0000;
+        }
+        .hov:hover {
+                color: green    ;
+        }
+        .act:active {
+            color:  rgb(184, 134, 11);
+        }
+    </style>
+</head>
+<body>
+    <h1>Свойства CSS</h1>
+<aside>
+    <h2>навигация</h2>
+        <ul class="nav">
+            <li><a class="nonv" href="../lab04/lab04.html">Лабораторная 4</a></li>
+            <li><a class="vis" href="../lab05/curriculum.html">Лабораторная 5</a></li>
+            <li><a class="hov" href="../lab06/index.html">Лабораторная 6</a></li>
+            <li><a href="../lab07/anmation.html">Лабораторная 7</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section>
+            <h3>Информация о свойствах CSS</h3>
+            <p>
+CSS-свойства — это параметры, которые определяют внешний вид HTML-элементов, например, цвет, размер и отступы. Каждое свойство имеет значение и записывается в формате свойство: значение внутри фигурных скобок после селектора. Существуют различные типы свойств, такие как:             </p>
+            <ul class="need">Обычные: управляют одним параметром (например, font-size для размера шрифта).</ul>
+            <ul class="need">Составные: управляют несколькими параметрами одновременно (например, font для всех параметров шрифта).</ul>
+            <ul class="need">Логические: адаптируются к разным режимам написания текста, что повышает гибкость дизайна. </ul>
+        </section>
+        <section>
+            <h3>Примеры CSS</h3>
+        <div class="property">
+            <h2>color</h2>
+            <p>Определяет цвет текста элемента. </p>
+        </div>
+
+        <div class="property">
+            <h2>font-size</h2>
+            <p>Устанавливает размер шрифта. </p>
+        </div>
+
+        <div class="property">
+            <h2>margin</h2>
+            <p>Задаёт внешние отступы вокруг элемента.</p>
+        </div>
+
+        <div class="property">
+            <h2>padding</h2>
+            <p>Задаёт внутренние отступы внутри элемента.</p>
+        </div>
+
+        <div class="property">
+            <h2>background-color</h2>
+            <p>Устанавливает цвет фона элемента. </p>
+        </div>
+        </section>
+    </main>
+
+</body>
+</html>

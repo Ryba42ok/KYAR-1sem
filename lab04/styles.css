@@ -1,0 +1,57 @@
+div {
+        display: inline;
+        font-size: 30px;
+        border: 8px solid black;
+        padding: 10px;
+        padding-top: 10px   ;
+    }
+       .red {
+      border-color: rgb(255,0,0);
+      border-style: outset;
+  }
+  .green {
+      border-color: rgb(0,255,0);
+      border-style: dashed;
+  }
+  .blue {
+      border-color: rgb(0,0,255);
+      border-style: dotted;
+  }
+  .cyan {
+      border-color: rgb(0,255,255);;
+      border-style: double;
+  }
+  .magenta {
+      border-color: rgb(255,0,255);;
+      border-style: groove;
+  }
+  .yellow {
+      border-color: rgb(255,255,0);;
+      border-style: inset;
+  }
+  .black {
+      border-color: rgb(0, 0, 0);
+  }
+  span
+  {
+    border: 3px solid,#FF4500;
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    background-color: #FFA500;
+  }
+  .first {
+width: 400px;
+text-align: center;
+border: 3px, solid, #FF7F50;
+  }
+  .second {
+border: 5px, solid, red;
+border-radius: 20px/40px;
+box-shadow: inset 2px 2px 8px 8px rgba(0, 0, 0, .5);
+overflow: auto;
+height: 100px;
+  }
+  .third {
+    border: 3px solid #FF6347;
+  }

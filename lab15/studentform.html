@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+            <meta charset="UTF-8">
+    <title>Данные студента</title>
+    <style>
+        .container {
+            width: 500px;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        td { width: 250px;
+        }
+            
+        .inputdiv   {
+            text-align: right;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+
+        <form>
+             <fieldset>
+           
+                <h2>Данные студента</h2>
+            <table>
+                
+                <tr>
+            <td class="inputdiv"> <span for="name">Имя студента </span></td>
+            <td> <input id="name" type="text" required placeholder="обязательно заполнить" /></td>
+                </tr>
+              <tr>
+            <td class="inputdiv"> <span for="otch">Отчество студента </span></td>
+            <td> <input id="otch" type="text" required placeholder="обязательно заполнить" /></td>
+                </tr>
+             <tr>
+            <td class="inputdiv"> <span for="surename">Фамилия студента </span></td>
+            <td> <input id="surename" type="text" required placeholder="обязательно заполнить" /></td>
+                </tr>
+                <tr> 
+            <td class="inputdiv"><span for="email" >Адрес почты</span> </td>
+            <td><input id="email"  type="email" /></td>
+                    </tr>
+            <td class="inputdiv"><span for="phone" >Контактный номер</span></td>
+            <td><input id="phone" type="tel" /></td>
+                    <tr>
+            <td class="inputdiv"><span>Какую социальную сеть вы используете?</span></td>
+            <td><div class="checks">
+                
+                <span>
+                 <input type="checkbox" name="social" value ="vk" /> 
+                    <span>VK</span>
+                </span>
+                <span>
+                    <input type="checkbox" name="social" value="facebook" />
+                    <span>Facebook</span>
+                </span>
+                <span>
+                    <input type="checkbox" name="social" value="instagram" />
+                    <span>Instagram</span>
+                </span> </td>
+                </tr>
+                <tr>
+               <td> <button type="submit">отправить</button></td>
+                </tr>
+
+            </table>
+            </fieldset>
+            </form>
+    </div>
+</body>
+
+</html>

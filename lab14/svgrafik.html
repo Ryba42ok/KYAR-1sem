@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body> 
+    <svg viewBox = "0 0 2000 2000">
+    <animate attributeName="cx" to="300"dur="5s"/> 
+<defs>  
+<path id="idname" fill="none" stroke="red" d="M20 30 C100, 100, 250, 100, 600, 30"/>  
+</defs> 
+<use xlink:href="#idname"/>  
+<text font-size = "36px" fill = "green" text-anchor = "middle">  
+<textPath startOffset = "50%" xlink:href="#idname">  The Long Dark  </textPath> 
+</text> 
+
+
+
+
+
+
+<g id = "figures" transform = "translate(0, 200)">
+    <g id = circle>
+        <circle cx = "200" cy = "150" r = "150" fill = "blue"/> 
+    </g>
+    
+        <g id = recta>
+    <rect x="400" y="0" width="400" height="300"
+        fill="red"
+        stroke="black"
+        stroke-width="4"
+        stroke-dasharray="1400"
+        stroke-dashoffset  = "1400">
+    <animate attributeName="stroke-dashoffset"
+        from="1400"
+        to="0"
+        dur="2s"
+        repeatCount="indefinite" />      
+        </rect>
+         <g>
+    <g id = ellipse>
+        <ellipse cx = "1050" cy = "150" rx = "200" ry = "120" fill = "green"/>
+    </g>
+    <g id = "treug">
+        <polygon points = "1300, 300 1600, 300 1450, 0" fill = "yellow"/>
+    </g>
+    <g id = "line">
+        <polyline points = "50,400    800, 400    750,450   1600, 450"  stroke="purple" stroke-width="3" fill = "none"/>
+    </g>
+</g>
+
+
+
+
+
+<path d = "M500, 800 L300, 1100 H450 L250, 1400 H400 V1600 H600 V1400 H750 L550, 1100 H700 z" fill = "none" stroke = "black"/>
+
+
+
+<path stroke = "black" stroke-width = "3" transform = "translate(400, 900)" d="M 50,40 A30,30 0 1, 1 40, 40 z" fill="yellow">
+<animate attributeName = "stroke" values = "black; cyan; blue; black" repeatCount="indefinite" dur = "1s" /> 
+</path>
+
+<path transform = "translate(450, 1250) scale(0.5)" d="M50 0 L62 35 L100 38 L70 62 L81 100 L50 80 L19 100 L30 62 L0 38 L38 35 Z" >
+     <animate attributeName = "fill" values = "black; cyan; blue; black" repeatCount="indefinite" dur = "2s" /> 
+</path>
+
+<path transform = "translate(450, 730)" d="M50 0 L62 35 L100 38 L70 62 L81 100 L50 80 L19 100 L30 62 L0 38 L38 35 Z" fill = "red" >
+</path>
+
+<path stroke = "black" stroke-width = "3" transform = "translate(500, 930)" d="M 50,40 A 30,30 0 1, 1 40,40 z" fill="purple">
+    <animate attributeName = "stroke" values = "black; cyan; blue; black" repeatCount="indefinite" dur = "2s" /> 
+</path>
+<path stroke = "black" stroke-width = "3" transform = "translate(500, 1200)" d="M 50,40 H100 V90 H50, V40 z" fill="blue">
+    <animate attributeName = "stroke" values = "black; purple; white; black" repeatCount="indefinite" dur = "2s" /> 
+</path>
+<path stroke = "black" stroke-width = "3" transform = "translate(300, 1300)" d="M 50,40 H150 V90 H50, V40 z" fill="green">
+    <animate attributeName = "stroke" values = "black; cyan; blue; black" repeatCount="indefinite" dur = "2s" /> 
+</path>
+<path stroke = "black" stroke-width = "3" transform = "translate(400, 1100)" d="M 50,40 H150 V90 H50, V40 z" fill="red" >
+    <animate attributeName = "stroke" values = "black;green ;cyan ; black" repeatCount="indefinite" dur = "2s" /> 
+</path>    
+</svg>
+
+
+
+</body>
+
+
+</html>

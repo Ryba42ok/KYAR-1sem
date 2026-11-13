@@ -1,0 +1,31 @@
+        h1,h2,h3,h4,h5,h6 {
+            color: purple;
+            font-family: "Monotype Corsiva";
+                }  
+        table, tr, td, th
+        {
+            border: 1px, solid, black;
+            border-collapse: collapse;
+        }
+        span {
+            font-style: italic;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+            color: red;
+        }   
+        .first {
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18pt;
+        }
+        .second {
+            color: yellow;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20pt;
+        }
+        .third {
+            color: green;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 22pt;
+        }

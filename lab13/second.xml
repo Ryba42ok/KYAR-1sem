@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xslsec.xsl"?>
+<!-- <?xml-stylesheet type="text/css" href="secstyle.css"?> -->
+<attestation>
+<student><fio>Григорчик Кирилл Сергеевич</fio><mark>1</mark></student>
+ <student><fio>Петрова Екатерина Дмитриевна</fio><mark>2</mark></student>
+ <student> <fio>Смирнов Михаил Андреевич</fio><mark>3</mark></student>
+ <student><fio>Ляхин Антон Валерьевич</fio><mark>4</mark></student>
+ <student><fio>Авдеев Тимофей Дмитриевич</fio><mark>5</mark></student>
+ <student> <fio>Коваль Максим Сергеевич</fio><mark>6</mark></student>
+ <student><fio>Морозов Даниил Юрьевич</fio><mark>7</mark></student>
+ <student><fio>Лебедева Софья Романовна</fio><mark>8</mark></student>
+ <student><fio>Волков Илья Максимович</fio><mark>9</mark></student>
+ <student><fio>Гацура Кирилл Сергеевич</fio><mark>1</mark></student>
+</attestation> 

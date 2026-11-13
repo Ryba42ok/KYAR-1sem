@@ -1,0 +1,38 @@
+shop {
+    padding: 20px;
+}
+itemh, item {
+    
+    text-align: center;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px;
+}
+nameh, imageh, costh {
+    border: 1px solid black;
+}
+name, image1, image2, image3, image4, image5, cost {
+    border: 1px solid black;
+}
+
+image1 {
+    background-image: url(data/hl-store-tldtshirt-002.png);
+    background-size: 300px 200px;
+}
+image2 {
+    background-image: url(data/hl-store-hl-constant-exploration-sweater-001.png);
+    background-size: 300px 200px;
+}
+image3 {
+    background-image: url(data/hl-store-hinterlandhoodie-001_736537ea-893a-4df6-9bc9-59796498521c.png);
+    background-size: 300px 200px;
+}
+image4 {
+    background-image: url(data/hl-store-mug-moose-coffee-001.png);
+    background-size: 300px 200px;
+}
+image5 {
+    background-image: url(data/hl-store-mug-hl-fox-001.png);
+    background-size: 300px 200px;
+}

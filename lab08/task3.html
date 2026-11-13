@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Выпадающее меню вниз</title>
+  <style>
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+      nav > ul > li {
+      position: relative;
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: yellow;
+      width: 60px;
+      border: 1px solid black;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: orange;
+    }
+
+    nav ul li ul li {
+      border: 3px dashed black;
+      display: block;
+      padding: 8px 15px;
+      
+    }
+    nav ul li ul li:first-child {
+        border: 3px dashed black;
+        border-bottom: none;
+      display: block;
+      padding: 8px 15px;
+    }
+    nav ul li ul li:last-child {
+        border: 3px dashed black;
+        border-top: none;
+      display: block;
+      padding: 8px 15px;
+      
+    }
+
+    nav ul li ul li a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+    li:hover ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        Меню
+        <ul>
+          <li><a href="../lab05/form.html">Форма</a></li>
+          <li><a href="../lab05/chess.html">Шахматная доска</a></li>
+          <li><a href="../lab06/third.html">Фотогалерея</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+</html>

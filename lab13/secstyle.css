@@ -1,0 +1,14 @@
+table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    width: 250px;
+    text-align: center;
+}
+.four {
+    background-color: red;
+}
+.eight {
+    background-color: green;
+}

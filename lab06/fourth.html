@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div {
+                display: inline-block;
+                width: 350px;
+                height: 350px;
+                
+            }
+            .first {
+                background-image: linear-gradient(blue, red);
+            }
+            .second {
+                background-image: repeating-linear-gradient(to bottom left,red, red 20px, blue 20px, blue 40px);
+}
+            .third {
+                background-image: radial-gradient(yellow, green);
+            }
+            .fourth {
+                background-image: repeating-radial-gradient(green, green 25px, yellow 25px, yellow 50px);
+            }
+            .fives {
+                background-image: radial-gradient(yellow, green, transparent),
+                linear-gradient(to top, rgb(185, 2, 185), blue);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+        <div class="fourth"></div>
+        <div class="fives"></div>
+    </body>
+</html>

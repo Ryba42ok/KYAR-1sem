@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="first_2.xsl"?> 
+<?xml-stylesheet type="text/css" href="style.css"?>
+<shop>
+  <items>
+    <itemh><nameh>Название</nameh><descrh>Описание</descrh><costh>Цена</costh></itemh>
+    <item><name>The Long Dark Axe T-shirt</name><descr>You’ll have to cut a swath through your admirers when you wear this classic THE LONG DARK ™ branded logo T-shirt. </descr><cost>55</cost></item>
+    <item><name>Hinterland Hoodie</name><descr>“I hope nobody needs this,” Will Mackenzie delivers gruffly, his teeth chattering, as he pulls a fabulously crafted black hoodie sweater from the depths of a rusty locker in Carter Dam.  </descr><cost>130</cost></item>
+    <item><name>Hinterland CONSTANT EXPLORATION Sweater</name><descr>This sophisticated black sweater showcases the stylized “H” Hinterland brand mark, and the words “Constant Exploration” embroidered.</descr><cost>125</cost></item>
+    <item><name>Moose Coffee Mug</name><descr>Savour your favourite hot beverage in this beautiful mug showcasing one of THE LONG DARK’s in-game brands, Big Moose Kicks coffee!</descr><cost>45</cost></item>
+    <item><name>Legacy Hinterland Fox Mug</name><descr>Enjoy your beverage in the Hinterland dev team’s favourite style mug, the same used to ship many many updates</descr><cost>45</cost></item>
+  </items>
+</shop>

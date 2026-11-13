@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<style>
+    .grid {
+        display: inline-grid;
+        grid-template-columns: 200px 200px 40px;
+        grid-template-rows: 100px 100px;
+        grid-gap: 10px;
+        grid-template-areas: "cell1 cell2 head" "cell1 cell3 head";
+    }
+    .head {
+        grid-area: head;
+        text-align: center;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        border: 2px solid black;
+       
+        padding: 10px;
+    }
+
+    .cell1 {
+        grid-area: cell1;
+        border: 2px solid black;
+        padding: 5px;
+        
+    }
+    .cell2 {
+        grid-area: cell2;
+        border: 2px solid black;
+        padding: 5px;
+      
+    }
+    .cell3 {
+        grid-area: cell3;
+        border: 2px solid black;
+        padding: 5px;
+       
+    }
+    
+</style>
+
+    </head>
+    <body>
+        <div class = "grid">
+            
+            <div class="cell1">CSS3 (Cascading Style Sheets 3) — это каскадные таблицы стилей третьего поколения, используемые для описания представления документов, написанных на языках разметки, таких как HTML.</div>
+            <div class="cell2">Это язык стилей, который позволяет оформлять HTML-элементы, делая это в виде стилей</div>
+            <div class="cell3">CSS3 расширил возможности предыдущей версии, добавив новые макеты (например, Flexbox и Grid). </div>
+            <div class="head">CSS3</div>
+        </div>
+    <div><a href="first.html">Переход на предыдущую Grid-вёрстку</a></div>
+    </body>    
+</html>

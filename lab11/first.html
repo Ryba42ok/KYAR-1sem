@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Шапка с логотипом и навигацией -->
+   <div class="main-container">
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo"> <!--ЛОГОТИП--> </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Страница 1</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Страница 2</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Страница 3</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Страница 4</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+ <main class="main">
+  <div class="container">
+    <div class="layout layout--split">
+
+      <!-- ЛЕВАЯ КОЛОНКА -->
+      <div class="layout__main">
+
+        <!-- Блок 1: три текстовых карточки -->
+        <section class="section section--text">
+          <h2 class="section__title">Некоторые механики</h2>
+          <div class="section__content">
+            <div class="card card--text">Очаг — это категория, в которой собраны места, где можно развести огонь для обогрева персонажа и/или приготовления пищи или напитков на варочной поверхности (для некоторых операций может потребоваться тара: котелок, пустая банка, сковорода). Все элементы категории, кроме костра, статичны - то есть имеют свое постоянное место расположения как в режиме истории, так и в выживании. Костер вы можете разместить самостоятельно в подходящем для этого месте.
+
+В игре огонь может быть закрытым (его не может задуть ветер) и открытым (защищает от хищников).
+
+Некоторые элементы категории имеют свою уникальную способность: костер (мобильность), кузнечный горн (крафт инструмента), брандспойт (не может задуть ветер).</div>
+            <div class="card card--text">Торговец — это выживший по имени Сазерленд, с которым можно связаться через приёмник для обмена товарами. В его ассортименте представлены как обычные предметы, так и уникальные вещи и чертежи, недоступные на острове Великого Медведя.
+
+Добавлен в версии 2.33. При старте нового выживания или при первой загрузке текущего выживания (созданного до обновления 2.33) торговца можно отключить или же оставить.</div>
+            <div class="card card--text">После смерти персонажа по любым причинам, вам на выбор будет предложено две опции: завершить игру на этом моменте и потерять текущее сохранение навсегда или обмануть смерть, получив при этом штрафы в виде болезней и потери части снаряжения.
+
+Это опциональное изменение системы перманентной смерти, которое добавляет новый игровой опыт для тех, кто не готов так просто расстаться со своим выживанием, или для тех, кто просто хочет чего-то нового. Кроме того, эта опция позволяет избежать случайных смертей, не связанных с ошибками самого игрока. Эта опция доступна на всех уровнях сложности, кроме Страданий.</div>
+          </div>
+        </section>
+
+        <!-- Блок 2: четыре изображения -->
+        <section class="section section--images">
+          <h2 class="section__title">Брошенный аэродром</h2>
+          <div class="section__content">
+            <div class="card card--image"><img src="data/airfield.png" alt=""></div>
+            <div class="card card--image"><img src="data/airfield2.png" alt=""></div>
+            <div class="card card--image"><img src="data/airfield3.png"></img></div>
+            <div class="card card--image"><img src="data/arfield1.png" alt=""></div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ПРАВАЯ КОЛОНКА -->
+      <section class="layout__sidebar">
+
+        <!-- Форма -->
+        <div class="form-block">
+          <h2>Форма</h2>
+          <form class="form">
+            <p><label for="surename">Фамилия: </label>
+                <input name="surename" type="text" required/></p>
+
+                <p><label for="name">Имя:</label>
+                <input name="name" type="text" required/></p>
+
+                <p><label for="otch">Отчество:</label>
+                <input name="otch" type="text" required /></p>
+                <p><label for="age">Ваш возраст:</label>
+                <input name="age" type="text" required/></p>
+                <p class="buttons">
+                    <input type="submit" value="Регистрация"></input> <input type = "reset" value="Отмена"></input>
+                </p>
+          </form>
+        </div>
+
+        <!-- Блок с двумя маленькими карточками -->
+        <section class="section section--text-small">
+          <h2 class="section__title">Заголовок</h2>
+          <div class="section__content">
+            <div class="card card--text-small">
+              <div class="card__image"><img src="data/cont3.png" alt=""></div>
+              <div class="card__text">Во время любого странствия наступает момент полной ясности. Когда голубое небо или пустая дорога указывает путь к цели.</div>
+            </div>
+            <div class="card card--text-small">
+              <div class="card__image"><img src="data/cont4.png" alt=""></div>
+              <div class="card__text">Машина Рюдигера — это устройство, разработанное Рюдигером и положившее начало всей истории.</div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+    </div>
+
+  </div>
+</main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container">
+      <p>Горевой Владимир Александрович 1-6 ПИ</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

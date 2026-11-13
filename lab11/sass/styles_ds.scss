@@ -1,0 +1,192 @@
+// Цвета
+$primary-color: #333;
+$secondary-color: #666;
+$background-color: #f5f5f5;
+$border-color: #ddd;
+$white: #fff;
+
+// Шрифты
+$font-family: 'Arial', sans-serif;
+$font-size-base: 16px;
+$font-size-large: 24px;
+$font-size-small: 14px;
+
+// Размеры
+$container-width: 1200px;
+$sidebar-width: 250px;
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 30px;
+
+// Тени
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size-base;
+    color: $primary-color;
+    background-color: $background-color;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: $spacing-medium;
+    display: grid;
+    grid-template-columns: 1fr $sidebar-width;
+    grid-gap: $spacing-large;
+}
+
+.header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: $spacing-large;
+    
+    &-title {
+        font-size: $font-size-large;
+        color: $primary-color;
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-large;
+}
+
+.text-section, .subheader-section, .form-section {
+    background-color: $white;
+    padding: $spacing-medium;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+}
+
+.subheader {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-small;
+    color: $secondary-color;
+}
+
+.image-section {
+    text-align: center;
+    
+    .placeholder-image {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid $border-color;
+    }
+}
+
+.form-section {
+    .form-title {
+        margin-bottom: $spacing-medium;
+    }
+    
+    .form-header {
+        margin-bottom: $spacing-small;
+        font-size: $font-size-base;
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-small;
+        
+        .form-group {
+            input {
+                width: 100%;
+                padding: $spacing-small;
+                border: 1px solid $border-color;
+                border-radius: 3px;
+            }
+        }
+        
+        .submit-btn {
+            padding: $spacing-small;
+            background-color: $primary-color;
+            color: $white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-large;
+    
+    .logo {
+        text-align: center;
+        
+        .logo-image {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    
+    .page-nav {
+        .nav-list {
+            list-style: none;
+            
+            .nav-item {
+                margin-bottom: $spacing-small;
+                
+                .nav-link {
+                    display: block;
+                    padding: $spacing-small;
+                    background-color: $white;
+                    text-decoration: none;
+                    color: $primary-color;
+                    border-radius: 3px;
+                    box-shadow: $box-shadow;
+                    transition: background-color 0.3s;
+                    
+                    &:hover {
+                        background-color: darken($white, 5%);
+                    }
+                }
+            }
+        }
+    }
+    
+    .contact-info {
+        background-color: $white;
+        padding: $spacing-medium;
+        border-radius: 5px;
+        box-shadow: $box-shadow;
+        
+        .contact-title {
+            margin-bottom: $spacing-small;
+            font-size: $font-size-base;
+        }
+        
+        .contact-details {
+            font-size: $font-size-small;
+        }
+    }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        order: -1;
+    }
+}

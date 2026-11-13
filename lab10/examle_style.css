@@ -1,0 +1,141 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Скрыть checkbox */
+#hamb {
+    display: none;
+}
+
+/* Стиль гамбургер-кнопки */
+label[for="hamb"] {
+    display: none; /* Скрыта на десктопе */
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+/* Навигация */
+nav ul.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+nav ul.menu-list li {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+nav ul.menu-list a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: aqua;
+}
+
+/* Контент */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cell {
+    border: 1px solid black;
+    background-color: gainsboro;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.cell {
+    flex: 1;
+    min-width: 280px; /* Минимальная ширина для адаптивности */
+}
+
+.cell3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+audio {
+    width: 100%;
+}
+
+/* ------ АДАПТИВНОСТЬ (Мобильные устройства) ------ */
+@media screen and (max-width: 768px) {
+    /* Показать гамбургер */
+    label[for="hamb"] {
+        display: block;
+    }
+
+    /* Скрыть меню по умолчанию */
+    nav ul.menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 9;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Показать меню, если чекбокс отмечен */
+    #hamb:checked ~ nav ul.menu-list {
+        display: flex;
+    }
+
+    /* На мобильных — ячейки в колонку */
+    .content {
+        flex-direction: column;
+    }
+
+    .cell {
+        width: 100%;
+    }
+}

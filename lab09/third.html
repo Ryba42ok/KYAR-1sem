@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container > div > a{
+            margin-top: 40px;
+            display: block;
+            margin-bottom: 20px ;
+        }
+        
+
+        .container 
+        {
+            display: grid;
+            grid-template-columns: 80px 300px 200px;
+            grid-template-rows: 50px 200px 50px;
+            grid-template-areas: "x1 y1 y1" "x1 y2 z2" "x3 x3 x3";
+            gap: 10px;
+        }
+        .container > div {
+            border: 1px solid black;
+        }
+
+        .header {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .article {
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+
+
+<div style="grid-area: x1;"><a href="https://htmlbook.ru/html/type/html5">HTML5</a> <a href="https://htmlbook.ru/css3">CSS3</a> <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Guides/Grid_layout/Basic_concepts">Grid-Вёрстка</a></div>
+<div class="header" style="grid-area: y1;">Grid-верстка</div>
+<div class="article" style="grid-area: y2;">Grid-верстка — это двумерная система разметки в веб-разработке, которая использует сетку из горизонтальных и вертикальных линий для упорядоченного размещения элементов на веб-странице. Она позволяет создавать как сложные, так и простые макеты, которые адаптируются под разные размеры экранов.</div>
+<div style="grid-area: z2">grid— это скелет и каркас, необходимый для любого дизайна. Она состоит из одинаковых прямоугольников — модулей. Из объединения модулей получаются блоки. Чем интереснее ваши блоки, тем необычнее получается дизайн.</div>
+<div class="header" style = "grid-area: x3;">Горевой Владимир Александрович 1-6 ФИТ ПИ</div>
+
+
+        </div>
+
+        <a href="third_2.html">Ко второму подпункту</a>
+</body>
+</html>

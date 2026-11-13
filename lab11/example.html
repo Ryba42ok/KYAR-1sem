@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сайт на CSS Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    /* Шапка */
+    header {
+      display: grid;
+      grid-template-columns: auto repeat(4, minmax(80px, 1fr));
+      align-items: center;
+      padding: 0 20px;
+      background-color: #333;
+      color: white;
+      height: 70px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Основной контейнер */
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Левая колонка — основной контент */
+    .content {
+      display: grid;
+      gap: 20px;
+    }
+
+    .content-section {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .content-section h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .text-blocks {
+      display: grid;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .image-item {
+      background: #ddd;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Правая колонка — сайдбар */
+    .sidebar {
+      display: grid;
+      gap: 20px;
+    }
+
+    .form-block, .sidebar-block {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .form-block h3,
+    .sidebar-block h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .form-block input,
+    .form-block textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .sidebar-content {
+      display: grid;
+      gap: 15px;
+    }
+
+    .sidebar-item {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .sidebar-item img {
+      background: #ddd;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+
+    /* Подвал */
+    footer {
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        text-align: center;
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding-top: 10px;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ЛОГОТИП</div>
+    <nav>
+      <a href="#">Стр. 1</a>
+      <a href="#">Стр. 2</a>
+      <a href="#">Стр. 3</a>
+      <a href="#">Стр. 4</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content">
+      <section class="content-section">
+        <h2>Заголовок основного раздела</h2>
+        <div class="text-blocks">
+          <div>Текстовый блок 1. Lorem ipsum dolor sit amet...</div>
+          <div>Текстовый блок 2. Consectetur adipiscing elit...</div>
+          <div>Текстовый блок 3. Sed do eiusmod tempor...</div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Еще один заголовок</h2>
+        <div class="image-grid">
+          <div class="image-item">Изображение 1</div>
+          <div class="image-item">Изображение 2</div>
+          <div class="image-item">Изображение 3</div>
+          <div class="image-item">Изображение 4</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="sidebar">
+      <div class="form-block">
+        <h3>Форма</h3>
+        <form>
+          <input type="text" placeholder="Имя" />
+          <input type="email" placeholder="Email" />
+          <textarea rows="4" placeholder="Сообщение"></textarea>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+
+      <div class="sidebar-block">
+        <h3>Сайдбар</h3>
+        <div class="sidebar-content">
+          <div class="sidebar-item">
+            <div>🖼️</div>
+            <div>Описание элемента 1</div>
+          </div>
+          <div class="sidebar-item">
+            <div>🖼️</div>
+            <div>Описание элемента 2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Мой сайт. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>

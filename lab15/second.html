@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+            <meta charset="UTF-8">
+    <title>Данные студента</title>
+    <style>
+    div.container {
+        width: 500px;
+    }
+    p {
+        margin: 5px;
+    }
+    label {
+        display: inline-block;
+        width: 200px;
+        text-align: right;
+        margin-right: 20px;
+    }
+    .check {
+            width: auto;
+            margin-right: 0;
+    }
+    select   {
+        width: 200px;
+    }
+    button {
+        width: 100px;
+        height: auto
+    }
+    </style>
+</head>
+
+<body>
+    <main>
+    <form name="form">
+    <div class="container">
+        <fieldset>
+           
+                <h2>Данные студента</h2>
+            <p><label for="name">Имя студента</label>
+            <input type="text" class="input_text" name="name" id="" required placeholder="обязательно заполнить"></p>
+            <p><label for="otch">Отчество студента</label>
+            <input type="text" name="otch" class="input_text" id="" required placeholder="обязательно заполнить"></p>
+            <p><label for="sur">Фамилия студента</label>
+            <input type="text" name="sur" class="input_text" id="" required  placeholder="обязательно заполнить"></p>
+            <p><label for="email">Адрес почты</label>
+            <input type="email" name="email" class="input_text" id="" ></p>
+            <p><label for="phone">Контактный номер</label>
+            <input type="tel" name="phone" class="input_text" id=""  ></p>
+            <p>
+                <label>Какую социальную сеть вы используете?</label>
+
+
+                <span>
+                <input class="check" id = "che" type="checkbox" name="social" value="Vk">
+                <label class="check" for="social">Vk</label>
+
+                <input class="check" id = "che" type="checkbox" name="social" value="Facebook">
+                <label class="check" for="social">Facebook</label>
+
+                <input class="check" id = "che" type="checkbox" name="social" value="Instagram">
+                <label class="check" for="social">Instagram</label>
+                </span>
+                </p>
+                <p><label for="facult">Какой ваш факультет?</label>
+                <select id="facult" class = "select">
+                    <option class="option" value="0">Выберите вариант</option>
+                    <option class="option" value="1">Лесохозяйственный факультет</option>
+                    <option class="option" value="2">Факультет лесной инженерии, материаловедения и дизайна</option>
+                    <option class="option" value="3">Факультет принттехнологий и медиакоммуникаций</option>
+                    <option class="option" value="4">Инженерно-экономический факультет</option>
+                    <option class="option" value="5">Факультет информационных технологий</option>
+                </select></p>
+
+                <p><label for="group">Ваша группа</label>
+                <select id="group" class = "select">
+                    <option value="0">Выберите вариант</option>
+                    <option class="group" value="1">1</option>
+                    <option class="group" value="2"> 2</option>
+                    <option class="group" value="3">3</option>
+                    <option class="group" value="4">4</option>
+                    <option class="group" value="5">5</option>
+                    <option class="group" value="6">6</option>
+                    <option class="group" value="7">7</option>
+                    <option class="group" value="8">8</option>
+                    <option class="group" value="9">9</option>
+                    <option class="group" value="10">10</option>
+                </select></p>
+
+                <p><label for="year">Ваш курс</label>
+                <select id="year" class = "select">
+                    <option value="0">Выберите вариант</option> 
+                    <option value="1">1</option>
+                    <option value="2"> 2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select></p>
+            <p class="buttons">
+                <button type="button" >Регистрация</button> <button type = "reset">Отмена</button>
+            </p>
+    </fieldset>
+    </form>
+    </main>
+        <footer>
+            <div  id = "footer"></div>
+        </footer>
+<script>
+
+    document.querySelector('button').addEventListener('click', function() {
+        const footer = document.getElementById('footer');
+        footer.innerHTML = "";
+
+        let text = document.querySelectorAll(".input_text")
+        for (let i = 0; i < text.length; i++)
+        {
+            let list = document.createElement("li")
+            list.innerHTML = text[i].value
+            document.getElementById("footer").append(list)
+        }
+
+        let check = document.querySelectorAll("#che")
+        for (let i = 0; i < check.length; i++)
+        {
+            if (check[i].checked)
+        {
+            let list = document.createElement("li")
+            list.innerHTML = check[i].value
+            document.getElementById("footer").append(list)
+        }
+        }
+
+
+let selects = document.forms[0].querySelectorAll(".select");
+let foot = document.getElementById("footer");
+
+for (let i = 0; i < selects.length; i++) {
+    let select = selects[i];
+    let options = select.options;
+
+    for (let j = 0; j < options.length; j++) {
+        if (options[j].value == '0') {
+            continue;
+        }
+        if (options[j].selected) {
+            let list = document.createElement("li");
+            list.textContent = options[j].text;
+
+            footer.append(list);
+        }
+    }
+}
+        
+      });
+</script>
+        </footer>
+    </div>
+</body>
+
+</html>

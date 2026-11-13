@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE shop [
+  <!ENTITY namecost "$45.00 CAD">
+  <!ELEMENT shop (items)>
+  <!ELEMENT items (itemh, item*)>
+  <!ELEMENT itemh (nameh, imageh, costh)>
+  <!ELEMENT item (name, (image1 | image2 | image3 | image4 | image5), cost)>
+
+  <!ELEMENT nameh (#PCDATA)>
+  <!ELEMENT imageh (#PCDATA)>
+  <!ELEMENT costh (#PCDATA)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT image1 (#PCDATA)>
+  <!ELEMENT image2 (#PCDATA)>
+  <!ELEMENT image3 (#PCDATA)>
+  <!ELEMENT image4 (#PCDATA)>
+  <!ELEMENT image5 (#PCDATA)>
+  <!ELEMENT cost (#PCDATA)>
+]>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<shop>
+  <items>
+
+    <itemh><nameh>Название</nameh><imageh>Картинка</imageh><costh>Цена</costh></itemh>
+    <item><name>The Long Dark Axe T-shirt</name><image1></image1><cost>$55.00 CAD</cost></item>
+    <item><name>Hinterland Hoodie</name><image2></image2><cost>$130.00 CAD</cost></item>
+    <item><name>Hinterland CONSTANT EXPLORATION Sweater</name><image3></image3><cost>$125.00 CAD</cost></item>
+    <item><name>Moose Coffee Mug</name><image4></image4><cost>&namecost;</cost></item>
+    <item><name>Legacy Hinterland Fox Mug</name><image5></image5><cost>&namecost;</cost></item>
+  </items>
+</shop>

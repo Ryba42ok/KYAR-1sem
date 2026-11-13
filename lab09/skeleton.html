@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 4 — Skeleton + Grid</title>
+
+    <link rel="stylesheet" href="skeleton/Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" href="skeleton/Skeleton-2.0.4/css/normalize.css">
+
+    <style>
+       .img {
+        width: 100px;
+        height: auto;
+       }
+       .divh {
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+  
+        <div class="row">
+          
+            <div class="one-half column">
+                <img src="data/FIT.jpg" alt="Логотип факультета" class="logo">
+            </div>
+
+            
+            <div class="one-half column">
+                <a href="first.html">Задание 1</a>
+                <a href="second.html">Задание 2</a>
+                <a href="third.html">Задание 3</a>
+                
+            </div>
+        </div>
+
+        <div class="row divh">
+            <div class="three columns">
+               Что такое Grid?
+            </div>
+            <div class="three columns">
+               Как создать сетку?
+            </div>
+            <div class="three columns">
+                Как размещать элементы?
+            </div>
+            <div class="three columns">
+                Где применять Grid?
+            </div>
+        </div>
+
+        <!-- Третья строка: информация о свойствах grid-верстки -->
+        <div class="row">
+            <div class="three columns">
+                <div>
+                    <p>Grid-верстка — это двумерная система разметки, основанная на сетке из горизонтальных и вертикальных линий. Она позволяет точно контролировать расположение элементов.</p>
+                </div>
+            </div>
+            <div class="three columns">
+                <div>
+                    <p>Чтобы создать сетку, используйте display: grid; или display: inline-grid;. Затем задайте размеры строк и колонок с помощью grid-template-rows и grid-template-columns</p>
+                </div>
+            </div>
+            <div class="three columns">
+                <div>
+                    <p>Элементы размещаются с помощью grid-area, grid-row, grid-column. Можно также использовать grid-template-areas для наглядного определения областей.</p>
+                </div>
+            </div>
+            <div class="three columns">
+                <div>
+                    <p>Grid идеально подходит для сложных макетов: страницы, галереи, адаптивных интерфейсов. Он заменяет старые методы на основе float и table.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

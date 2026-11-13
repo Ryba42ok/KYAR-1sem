@@ -1,0 +1,174 @@
+@import 'task_variables.scss';
+
+.container {
+    display: $grid;
+    grid-template-areas:  
+    "y y y y y y y" 
+    "z z z z z q q"
+    "z z z z z q q"
+    "z z z z z q q"
+    "z z z z z q q"
+    "z z z z z q q"
+    "a a a a a a a";
+    grid-template-columns: repeat(7, 14%);
+    grid-template-rows: repeat(6, 15%);
+    grid-gap: 5px;
+    position: fixed;
+    width: 98%;
+    height: 98%;
+    overflow: auto;
+}
+// --------header---------
+header {
+    display: $flex;
+    flex-flow: row;
+    justify-content: space-between;
+    grid-area: y;
+    background-image: url("Cyber_05.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    nav {
+    align-self: center;
+        a {
+            @include a;
+        }
+    } 
+}
+// --------aside---------
+aside {
+    grid-area: q;
+    align-items: stretch;
+    overflow: auto;
+    background-color: rgb(247, 233, 215);
+
+    h2 {
+        margin: 5px 0 5px 10px;
+        font-size: $h4;
+    }
+
+    div {
+        figure {
+            display: block;
+            width: 50%;
+            margin: 10px 0 0 5px;
+            float: left;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+form {
+    width: fit-content;
+}
+label {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 30%;
+    margin: -5px 3px -5px 15px;
+    font-size: text($h4);
+}
+input[type="text"] {
+    display: inline-block;
+    width: 40%;
+}
+// --------main----------
+main {
+    grid-area: z;
+    align-items: stretch;
+    overflow: auto;
+}
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+main {
+    section {
+        figure {
+            flex: 1 1 100px;
+            display: inline-block;
+            margin: 0;
+        }
+    }
+}
+main {
+    section {
+        figure {
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+main {
+    section {
+        p {
+            font-size: text($title);
+            padding: 7px;
+            background-color: rgb(247, 233, 215);
+        }
+    }
+}
+// --------footer-----------
+footer {
+    grid-area: a;
+    padding: 40px;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px rgb(100, 100, 100);
+}
+// --------else-----------
+.border {
+    border: 2px solid black;
+    margin: 3px
+}
+
+.title {
+    @include title;
+    background-color: rgb(209, 254, 213);
+}
+
+div[class="title border"] {
+    @extend %font-cyber;
+}
+p {
+    @extend %font-cyber;
+}
+
+// display
+$grid: grid;
+$flex: flex;
+
+// текст
+@mixin title {
+    font-size: $title;
+    font-weight: bold;
+    text-align: center;
+}
+
+$h4: 24px;
+$title: 30px;
+@function text($h) {
+    $text: $h - 8px;
+    @return $text;
+}
+
+// ссылки
+@mixin a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid rgb(77, 77, 77);
+    border-radius: 20px;
+    background-color: rgb(250, 163, 49);
+}
+
+%font-cyber {
+    color: rgb(0, 200, 210);
+    text-shadow: 0 0 2px rgb(213, 246, 0);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       
+p {  
+position: relative; 
+animation: around 4s linear infinite; 
+}
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .div:hover { 
+            background-color: rgb(255,0,0); 
+            transition: background-color 1s linear 0.5s;
+            
+            } 
+        
+        .div { 
+            width: 400px;
+            height: 300px;
+            background-size: 400px 300px;
+            animation: around 5s;
+            position: relative;
+            }
+ @keyframes around { 
+0% { left: 0; top: 0; } 
+25% { left: 200px; top: 0; } 
+50% { left: 200px; top: 200px; } 
+75% { left: 0; top: 200px; } 
+100% { left: 0; top: 0; } 
+} 
+    </style>
+</head>
+    <body>
+        <div class="div">
+<img class="div" src="data/airfield2.png" alt="">
+
+        </div> 
+    </body>
+
+</html>

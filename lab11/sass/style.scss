@@ -1,0 +1,235 @@
+@import 'variables';
+
+.main-container {
+  width: 100%;
+}
+header {
+    font-family: $family;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.header {
+  background-image: url(/data/airfield3.png);
+  background-size: cover;
+  background-repeat: round;
+  height: auto;
+  margin-bottom: 10px;
+  
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing;
+  }
+}
+
+.logo {
+background-image: url(/data/images.png);
+background-size: cover;
+    font-weight: bold;
+    font-size: 20px;
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+
+}
+.nav {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    gap: $spacing;
+    padding-right: 30px;
+  }
+   &__link {
+    font-size: 30px;
+    text-decoration: $link-transp;
+    padding: 8px 16px;
+    border: 1px solid $border-color;
+    color: wheat;
+   }
+}
+
+.section {
+  &__title {
+    border: 1px solid black;
+    margin-bottom: $spacing;
+    text-align: center;
+    border-bottom: 2px solid $border-color;
+    padding-bottom: 10px;
+  }
+
+  &__content {
+    display: flex;
+    gap: $spacing;
+    flex-wrap: wrap;
+  }
+}
+.card {
+  border: 1px solid $border-color;
+  background-color: $secondary-color;
+  min-height: 150px;
+  display: flex;
+  align-items: flex-start ;
+  justify-content: center;
+  font-size: 25px;
+  text-align: center;
+
+  &--text {
+    flex: 1 1 20%;
+
+  }
+
+  &--image {
+    flex: 1 1 20%;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  &--text-small {
+    display: flex;
+    align-items: center;
+    gap: $spacing;
+    padding: 15px;
+    border: 1px solid $border-color;
+    background-color: $secondary-color;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & .card__image {
+    
+      width: 250px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    & .card__text {
+      align-content: center;
+      flex: 1;
+      height: 250px;
+      border: 1px solid black;
+
+    }
+  }
+}
+.section--text-small .section__content {
+      border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; 
+}
+.layout {
+  display: flex;
+  gap: $spacing;
+
+
+  &__main {
+    flex: 3;
+  }
+
+  &__sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing;
+  }
+}
+
+// Форма
+
+
+
+
+img {
+  width: 100%;
+}
+
+@mixin font-size {
+  font-size: 25px;
+}
+
+%form-col {
+  color: blue;
+}
+
+.form-block {
+  margin-top: 40px;
+  padding: $spacing;
+  border: 1px solid $border-color;
+
+  &__title {
+    @include font-size();
+    margin-bottom: $spacing;
+    text-align: center;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing;
+  @extend %form-col
+}
+
+p {
+  margin: 3px;
+  @include font-size();
+}
+h2, .section__title {
+  font-size: $head-size;
+  padding-top: 20px;
+            }
+  label {
+  display: inline-block;
+  width: 170px;
+  text-align: left;              
+            }         
+ .buttons
+{
+  text-align: right;
+} 
+input[type="submit"], input[type="reset"] {
+  @extend %form-col;
+  @include font-size();
+}
+input[type="text"] {
+  @include font-size()
+}
+
+
+
+@function text-font-size($head-size){
+  @if ($head-size <= 50px){
+  @return $head-size*0.7;
+  }
+  @else
+  {
+    @return $head-size * 0.4;
+  }
+}
+div.card, div.card--text-small,label{
+  font-size: text-font-size($head-size);
+}
+
+
+//подвал
+.footer {
+  background-color: $secondary-color;
+  border-top: 1px solid $border-color;
+  padding: $spacing 0;
+  text-align: center;
+
+
+  p {
+    font-weight: bold;
+  }
+}
+  

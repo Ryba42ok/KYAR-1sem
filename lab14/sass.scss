@@ -1,0 +1,50 @@
+        $Times: Times;
+        
+        
+        h1,h2,h3,h4,h5,h6 {
+            color: purple;
+            font-family: "Monotype Corsiva";
+                }  
+        h1 {
+            text-align: center;
+        }
+        table, tr, td, th
+        {
+            border: 1px, solid, black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        caption {
+            font-weight: bold;
+        }
+        span {
+            font-style: italic;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: $Times;
+            color: red;
+        }   
+        .first {
+            color: red;
+            font-family: $Times;
+            font-size: 18pt;
+        }
+        .second {
+            color: yellow;
+            font-family: $Times;
+            font-size: 20pt;
+        }
+        .third {
+            color: green;
+            font-family: $Times;
+            font-size: 22pt;
+        }
+
+        body > p {
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16pt;
+        }
+        tr th {background-color: green;} 
+        tr td {background-color: green;} 
+            

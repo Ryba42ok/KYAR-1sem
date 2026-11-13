@@ -1,0 +1,303 @@
+div {
+    margin-bottom: 100px;
+    display: block;
+    height: auto;
+}
+body {
+    overflow-x: hidden;
+}
+img {
+    margin: 0 40px 0 50px;
+    width: 370px;
+    height: 300px;
+}
+img.first:hover {
+    transform: scale(0.5);  
+}
+img.second:hover {
+    transform: rotate(45deg);
+}
+img.third:hover {
+    transform: translate(50px);
+}
+img.fourth:hover {
+    transform: skew(-20deg);
+}
+button {
+    width: 200px;
+    height: 100px;
+    margin:  0 50px 0 50px;
+}
+button.first:hover {
+    background-color: black;
+    color: white;
+}
+button.second:hover {
+    background-color: white ;
+    outline: 10px solid yellow;
+    border: 10px solid red;
+}
+button.third:hover {
+    background-color: white ;
+    border: 0 solid green;
+    border-width: 10px 0 10px 0;
+}
+button.fourth:hover {
+    background-color: white ;
+    border: 0 solid blue;
+    border-width: 0 10px 0 10px;
+}
+button.fives:hover {
+    font-weight: bold;
+    background-color: white ;
+    border-color: white;
+    background-color: aqua;
+    background-image: radial-gradient(yellow 10% , rgb(243, 37, 209) 60%, transparent);
+}
+img.tfirst {
+    transform: perspective(150px) rotateX(15deg);
+}
+img.tsecond {
+    transform: perspective(150px) rotateY(15deg);
+}
+img.tthird {
+    transform: perspective(200px) rotateX(15deg);
+}
+img.tfourth {
+    transform: perspective(150px) rotateY(-15deg);
+}
+
+.ffirst {
+    margin-top: 100px;
+    position: absolute;
+    transform: perspective(150px) rotateY(15deg);
+    left: 40px;
+    animation: anim1 5s;
+}
+.fsecond {
+    margin-top: 100px;
+    position: absolute;
+    transform: perspective(150px) rotateY(15deg);
+    left: 80px;
+    animation: anim2 5s;
+    
+}
+.fthird {
+    margin-top: 100px;
+    position: absolute;
+    transform: perspective(150px) rotateY(15deg);
+    left: 120px;
+    animation: anim3 5s;
+}
+.ffourth {
+    margin-top: 100px;
+    position: absolute  ;
+    transform: perspective(150px) rotateY(15deg);
+    left: 160px;
+    animation: anim4 5s;
+}
+@keyframes anim1 {
+0% {
+		transform: perspective(150px) rotateY(15deg);
+}
+50% {
+    transform: perspective(none) rotateY(0deg);
+}
+100% {
+    transform: translate(100px);
+}
+}
+@keyframes anim2 {
+0% {
+		transform: perspective(150px) rotateY(15deg);
+}
+50% {
+    transform: perspective(none) rotateY(0deg);
+}
+100% {
+    transform: translate(500px);
+    filter: blur(10px);
+}
+}
+@keyframes anim3 {
+0% {
+		transform: perspective(150px) rotateY(15deg);
+}
+50% {
+    transform: perspective(none) rotateY(0deg);
+}
+100% {
+    transform: translate(900px);
+    filter: grayscale(1);
+}
+}
+@keyframes anim4 {
+0% {
+		transform: perspective(150px) rotateY(15deg);
+}
+50% {
+    transform: perspective(none) rotateY(0deg);
+}
+100% {
+    transform: translate(1300px);
+    filter:  invert(1);
+}
+}
+@keyframes animfor5 {
+    0% {}
+20% {
+    background-image: url(data/cont1.png); 
+}
+40% {
+    background-image: url(data/airfield3.png); 
+}
+60% {
+    background-image: url(data/cont2.png); 
+}
+80% {
+    background-image: url(data/cont3.png); 
+}
+100% {
+    background-image: url(data/cont4.png); 
+}
+
+}
+.taskfive
+{
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 600px   ;
+    background-size: 800px 600px;
+    animation-timing-function: linear;
+    background-image: url(data/cont1.png);
+    border: 10px solid yellow;
+    animation: animfor5 5s infinite;
+}
+
+
+
+.tasksix {
+    display: block;
+}
+img.sixfirst {
+    display: block;
+    width: 400px;
+    height: 400px;
+    animation: sixf 5s;
+    animation-iteration-count: infinite;
+    margin-bottom: 50px;
+}
+img.sixsecond {
+    width: 400px;
+    height: 400px;
+    display: block;
+    animation: sixsec 5s;
+    margin-bottom: 50px;
+    animation-iteration-count: infinite;
+}
+img.sixthird {
+    width: 400px;
+    height: 400px;
+    animation: sixth 5s;
+    margin-bottom: 50px;
+    display: block;
+    position: relative;
+    left: -500px;
+    animation-iteration-count: infinite;
+}
+img.sixfourth {
+     width: 400px;
+    height: 400px;
+    display: block;
+    animation: sixfor 5s;
+    margin-bottom: 60px;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+img.sixfives {
+    width: 400px;
+    height: 400px;
+    display: block;
+    animation: sixfiv 5s;
+    margin-bottom: 50px;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+@keyframes sixf {
+100% {
+    transform: translateX(200px);
+}
+}
+@keyframes sixsec{
+100% {
+    border-radius: 250px;
+    transform: translateX(200px);
+    
+}
+}
+@keyframes sixth{
+100% {
+    left: 100%;
+    
+}
+}
+@keyframes sixfor{
+100% {
+    transform: translateY(50px);
+}
+}
+@keyframes sixfiv { 
+0% { left: 0; top: 0; } 
+25% { left: 200px; top: 0; } 
+50% { left: 200px; top: 200px; } 
+75% { left: 0; top: 200px; } 
+100% { left: 0; top: 0; } 
+} 
+.seven {
+    border: 1px solid black;
+    font-size: 22px;
+    width: 300px;
+    height: 300px;
+    color: rgb(0,0,255); 
+    background-color: yellow;
+}
+.seven:hover { 
+color: rgb(255,0,0); 
+transition: color 5s linear; 
+} 
+/* h3 {
+    animation: h3anim 5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+} */
+@keyframes h3anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 80%;
+    }
+}
+
+
+.nav {
+    display: inline-block;
+    list-style-type: none;
+}
+.nav li {
+    background-color: yellow;
+    height: 30px;
+    text-align: center;
+    padding:20px 5px 10px 5px;
+    border: 2px solid green;
+    width: 100px;
+    display: inline-block;
+    margin-right: -4px;
+    list-style-type: none;
+    
+}
+ul.nav a {
+    color: green;
+    text-decoration: none;
+    display: inline-block;
+}

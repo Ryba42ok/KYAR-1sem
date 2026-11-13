@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+           
+        </style>
+    </head>
+    <body>
+        <div class = "container">
+
+            <div class = "photo" id = "cont1">
+                <img class="first" id = "photo1" src="data/episode5_second.png" alt="">
+                <p id = "description">Пятый и финальный эпизод «The Long Dark: Wintermute» выйдет 31 марта 2026 года. Это будет бесплатное дополнение для всех владельцев основной игры. </p>
+            </div>
+            <div  class = "photo" id = "cont2">
+                <img class="second" id = "photo2" src="data/airfield2.png" alt="">
+            </div>
+            <div class = "photo photo3" id = "cont3">
+                <img class="third_1" id = "photo3_1" src="data/airfield3.png" alt="">
+                <img class="third_2" style="display: none;" id = "photo3_2" src="data/episode5.png" alt="">
+            </div>
+
+        </div>
+    </body>
+    <script>
+         const photo1 = document.getElementById('photo1');
+         const cont1 = document.getElementById('cont1');
+         const cont2 = document.getElementById('cont2');
+         const cont3 = document.getElementById('cont3');
+         const description = document.getElementById('description');
+         const photo2 = document.getElementById('photo2');
+         const photo3_1 = document.getElementById('photo3_1');
+         const photo3_2 = document.getElementById('photo3_2');
+
+         cont1.addEventListener('mouseover', function() {
+        photo1.style.display = 'none';
+        description.style.display = 'block';
+                });
+
+        cont1.addEventListener('mouseout', function() {
+        photo1.style.display = 'block';
+        description.style.display = 'none';
+        });
+
+        let border_exists = true;
+        cont2.addEventListener('click', function() {
+                if (border_exists) {
+                    border_exists = false;
+                    photo2.style.border = "10px solid red"
+                }
+                else
+                {
+                    border_exists = true;
+                    photo2.style.border = "none"
+                }
+        });
+
+        cont3.addEventListener("mouseout", function(){
+            photo3_1.style.display = "block"
+            photo3_2.style.display = "none"
+        });
+        cont3.addEventListener("mouseover", function(){
+            photo3_1.style.display = "none"
+            photo3_2.style.display = "block"
+        });
+    </script>
+</body>
+</html>
